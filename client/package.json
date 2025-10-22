@@ -1,0 +1,39 @@
+{
+  "name": "coinflip-casino",
+  "version": "1.0.0",
+  "description": "CoinFlip Casino - Игра в орёл и решку с онлайн мультиплеером",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "devDependencies": {
+    "electron": "^23.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.coinflip.casino",
+    "productName": "CoinFlip Casino",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!server/**/*",
+      "!*.md"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "author": "CoinFlip Casino",
+  "license": "MIT"
+}
