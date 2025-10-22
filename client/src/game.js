@@ -477,7 +477,7 @@ class MultiplayerManager {
     connect() {
         try {
             // RAILWAY URL - ЗАМЕНИ НА СВОЙ ПОСЛЕ ДЕПЛОЯ!
-            const serverURL = 'wss://readygame-production.up.railway.app';
+            const serverURL = 'https://coinflip-render.onrender.com';
             
             console.log(`🔗 Подключаемся к серверу: ${serverURL}`);
             this.socket = new WebSocket(serverURL);
